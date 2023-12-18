@@ -6,5 +6,7 @@ import com.example.lesson03.domain.Review;
 
 @Repository
 public interface ReviewMapper {
-	public Review selectReview();
+	
+	// input: id   out: Review
+	public Review selectReview(int id);
 }

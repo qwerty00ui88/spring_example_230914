@@ -12,6 +12,7 @@ public class Review {
 	private String review;
 	private Date createdAt;
 	private Date updatedAt;
+	
 	public int getId() {
 		return id;
 	}
