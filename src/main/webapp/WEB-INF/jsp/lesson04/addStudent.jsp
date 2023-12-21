@@ -28,7 +28,7 @@
 				<input type="text" id="email" name="email" class="form-control col-4">
 			</div>
 			<div class="form-group">
-				<label for="dreamJob">이메일</label>
+				<label for="dreamJob">장래희망</label>
 				<input type="text" id="dreamJob" name="dreamJob" class="form-control col-4">
 			</div>
 
