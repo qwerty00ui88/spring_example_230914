@@ -36,10 +36,10 @@ public class Lesson04Ex02Controller {
 		
 		// DB에서 방금 가입된 사용자 select
 		int id = student.getId();
-		Student newStudent = studentBO.getStudentById(id);
+		Student latestStudent = studentBO.getStudentById(id);
 		
 		// Model 객체에 담는다.(jsp에서 사용하도록)
-		model.addAttribute("student", newStudent);
+		model.addAttribute("student", latestStudent);
 		
 		// 화면 뿌리기 => 테이블
 		return "lesson04/afterAddStudent";
