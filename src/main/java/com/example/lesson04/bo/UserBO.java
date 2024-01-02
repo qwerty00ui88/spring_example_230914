@@ -22,4 +22,9 @@ public class UserBO {
 		return userMapper.selectLatestUser();
 	}
 	
+	// input: name   output: boolean(true: 중복, false: 중복 아님)
+	public boolean isDuplicationByName(String name) {
+		return userMapper.isDuplicationByName(name);
+	}
+	
 }
