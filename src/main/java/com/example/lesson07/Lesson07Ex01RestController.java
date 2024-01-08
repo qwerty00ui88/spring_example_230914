@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.lesson04.bo.StudentBO;
 import com.example.lesson07.entity.StudentEntity;
 
-@RequestMapping("/lesson07")
+@RequestMapping("/lesson07/ex01")
 @RestController
 public class Lesson07Ex01RestController {
 
@@ -17,7 +17,7 @@ public class Lesson07Ex01RestController {
 	
 	// http://localhost/lesson07/ex01/1
 	// c: create
-	@GetMapping("/ex01/1")
+	@GetMapping("/1")
 	public StudentEntity create() {
 		String name = "김바다";
 		String phoneNumber = "010-1111-2222";
@@ -28,4 +28,21 @@ public class Lesson07Ex01RestController {
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
 	
+	// http://localhost/lesson07/ex01/2
+	// u: update
+	@GetMapping("/2")
+	public StudentEntity update() {
+		// id가 5번인 dreamJob 변경
+		// 5, 디자이너
+		return studentBO.updateStudentDreamJobById(5, "디자이너");
+	}
+	
+	// http://localhost/lesson07/ex01/3
+	// d: delete
+	@GetMapping("/3")
+	public String delete() {
+		// id: 6
+		studentBO.deleteStudentById(6);
+		return "삭제 완료";
+	}
 }
